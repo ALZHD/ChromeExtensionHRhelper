@@ -1,0 +1,25 @@
+{
+    "name": "test",
+    "version": "0.1.0",
+    "description": "test",
+    "permissions": ["storage", "tabs", "activeTab","scripting"],
+    "host_permissions": ["https://*/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*/*", "http://*/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "action": {
+      "default_title": "My YT Bookmarks",
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": [{
+        "matches": ["<all_urls>"],
+        "resources": ["your/content_main.js"]
+      }],
+    "manifest_version": 3
+  }
