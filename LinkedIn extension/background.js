@@ -21,10 +21,10 @@ const postRequest = async (info) => {
     },
     body: JSON.stringify(info)
   });
+return true
+  // const content = await rawResponse.json();
 
-  const content = await rawResponse.json();
-
-  console.log(content);
+  // console.log(content);
 };
 
 function foo() {

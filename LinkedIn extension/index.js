@@ -1,4 +1,30 @@
 
+
+
+document.querySelector('.uploadInfoBtn1').addEventListener("click", ()=> {chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, {
+      action: "initiateFunction"
+    },  (response) => {
+        document.getElementById("success").innerHTML = "Successfully Parsed";
+        console.log("success")});
+  });})
+
+
+
+
+// document
+// .querySelector('#colour-submit-btn')
+// .addEventListener('click', () => {
+//   // read the colour that the user has selected
+//   const colour = document.querySelector('#colour-input').value;
+//   // get all the google tabs and send a message to their tabs
+//   chrome.tabs.query({ url: 'https://*.google.com/*' }, tabs => {
+//     tabs.forEach(tab =>
+//       chrome.tabs.sendMessage(tab.id, { colour } )
+//     );
+//   });
+// });
+
 // document.querySelector('.show-btn').addEventListener("click", ()=> {
 //     console.log(123)
 //     document.querySelector('.show-btn').innerHTML = "123"
@@ -33,3 +59,13 @@
 
 // let page = chrome.test.getBackgroundPage();
 // page.foo();
+
+// function notifyBackgroundPage(e) {
+//     const sending = chrome.runtime.sendMessage({
+//         greeting: profileInfo,
+//     });
+//     sending.then(handleResponse);
+// }
+
+// const yourButtonElement = document.getElementById("someID");
+// yourButtonElement.addEventListener("click", notifyBackgroundPage)

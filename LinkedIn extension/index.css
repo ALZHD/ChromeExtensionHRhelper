@@ -1,0 +1,28 @@
+.container {
+width: 120px;
+height: 140px;
+display: flex;
+align-items: center;
+flex-direction: column;
+border: solid;
+}
+
+h2{
+color: blue;
+}
+
+input{
+  background-color: #133e9a;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+#success{
+padding-top: 10px;
+color: #133e9a;
+}
